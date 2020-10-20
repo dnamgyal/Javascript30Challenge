@@ -10,36 +10,64 @@
 
   <script>
     const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+    const p = document.querySelector('p');
 
     function makeGreen() {
-      const p = document.querySelector('p');
       p.style.color = '#BADA55';
       p.style.fontSize = '50px';
     }
 
     // Regular
 
+    console.log('hello')
+
     // Interpolated
+
+    console.log('Hello I am a %s string!', 'good')
 
     // Styled
 
+    console.log('%c I am great', 'font-size:50px')
+
     // warning!
+    console.warn('danger')
 
     // Error :|
 
+    console.error('error boy')
+
     // Info
+
+    console.info('information')
 
     // Testing
 
+    console.assert(1 === 2, 'they are not equal')
+
     // clearing
 
+    //console.clear()
+
     // Viewing DOM Elements
+    console.dir(p)
 
     // Grouping together
 
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`)
+      console.log(`This is ${dog.name}`)
+      console.groupEnd()
+    })
+
+
     // counting
+    console.count('wes')
 
     // timing
+
+    console.time('fetching data')
+    console.log('printing stufff')
+    console.timeEnd('fetching data')
 
   </script>
 </body>
